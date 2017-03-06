@@ -1,0 +1,69 @@
+body {
+	background: white;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+#leftBar {
+	background-color: #222A37;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	position: fixed;
+	width: 262px;
+	box-shadow: 6px 2px 8px rgba(0, 0, 0, 0.80);
+	-moz-box-shadow: 6px 2px 8px rgba(0, 0, 0, 0.80);
+	-webkit-box-shadow: 6px 2px 8px rgba(0, 0, 0, 0.80);
+}
+
+.hellouser {
+	color: #222A37;
+	font-family: Arial;
+	font-size: 20px;
+	font-weight: bold;
+	padding-left:5px;
+	background:#0859E2;
+	width: 223px;
+	height:40px;
+	border-bottom:  2px solid white;
+	margin-bottom:1px; 
+	padding: 20px;
+}
+
+
+a.button {
+	-moz-box-shadow: 0px 10px 14px -7px #276873;
+	-webkit-box-shadow: 0px 10px 14px -7px #276873;
+	box-shadow: 0px 10px 14px -7px #276873;
+	background-color: #1D52AB;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 20px;
+	font-weight: bold;
+	width: 200px;
+	padding: 13px 32px;
+	border-bottom: 1px solid;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #3d768a;
+	
+}
+
+.button:hover {
+	background-color: #222A37;
+}
+
+.button:active {
+	position: relative;
+	top: 1px;
+}
+
+
+.container{
+	margin-left:300px;
+	margin-top:80px;
+	width: 800px;
+    height: 400px;
+	overflow: scroll;
+}
+

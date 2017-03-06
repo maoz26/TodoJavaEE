@@ -1,0 +1,42 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Todo:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Todo_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Todo" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/../TodoListWeb/lib/javax.ejb.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../TodoListWeb/lib/javax.jms.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../TodoListWeb/lib/el-api-2.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../TodoListWeb/lib/antlr-2.7.7.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../TodoListWeb/lib/cdi-api-1.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../TodoListWeb/lib/dom4j-1.6.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../TodoListWeb/lib/javax.servlet.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../TodoListWeb/lib/javax.inject-1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../TodoListWeb/lib/javax.resource.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../TodoListWeb/lib/jsr250-api-1.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../TodoListWeb/lib/classmate-1.3.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../TodoListWeb/lib/javax.annotation.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../TodoListWeb/lib/javax.servlet.jsp.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../TodoListWeb/lib/jandex-2.0.0.Final.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../TodoListWeb/lib/javassist-3.20.0-GA.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../TodoListWeb/lib/javax.servlet.jsp.jstl.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../TodoListWeb/lib/jboss-logging-3.3.0.Final.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../TodoListWeb/lib/hibernate-core-5.2.3.Final.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../TodoListWeb/lib/geronimo-jta_1.1_spec-1.1.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../TodoListWeb/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../TodoListWeb/lib/hibernate-commons-annotations-5.0.1.Final.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../TodoListWeb/lib/jboss-interceptors-api_1.1_spec-1.0.0.Beta1.jar" />
+          <element id="file-copy" path="$APPLICATION_HOME_DIR$/redist/annotations-java8.jar" />
+          <element id="library" level="application" name="scala-sdk-2.10.6" />
+          <element id="file-copy" path="$USER_HOME$/Desktop/jars_this_code_sample_uses/mysql-connector-java-5.1.13-bin.jar" />
+          <element id="file-copy" path="$USER_HOME$/Desktop/jars_this_code_sample_uses/hibernate3.jar" />
+          <element id="file-copy" path="$USER_HOME$/Desktop/jars_this_code_sample_uses/hibernate-jpa-2.0-api-1.0.0.Final.jar" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="Todo/web/Web" />
+    </root>
+  </artifact>
+</component>
