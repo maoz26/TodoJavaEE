@@ -17,8 +17,8 @@
 <body>
     <div class="col-md-9 col-md-offset-3"><br><br><br>
         <h3>Project name: Todo list Java EE final project</h3><br>
-        <p>Student names: Maoz Tamir and Mark Pertsovsky </p>
-        <p>Lecturer name: Haim Michael</p>
+        <p><b>Student names:</b> Maoz Tamir and Mark Pertsovsky </p>
+        <p><b>Lecturer name:</b> Haim Michael</p>
     </div>
 </body>
 </html>

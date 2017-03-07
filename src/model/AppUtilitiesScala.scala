@@ -24,11 +24,10 @@ object AuthenticationHandlerUtilitiesScala {
 			md.update(pass.getBytes())
 			//Get the hash's bytes
 			bytes = md.digest()
-			//This bytes[] has bytes in decimal format;
-			//Convert it to hexadecimal format
+			//This bytes[] has bytes in decimal format, Convert it to hexadecimal format
 			val sb = new StringBuilder()
 			var i = 0
-			for(i <-0 until bytes.length){
+			for(i <-bytes.indices){
 				sb.append(Integer.toString((bytes(i) & 0xff) + 0x100, 16).substring(1))
 			}
 			//Get complete hashed password in hex format

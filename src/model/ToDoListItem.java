@@ -1,10 +1,9 @@
+package model;
+
 /**
  * ToDoListItem schema
  * Created by maoztamir on 31/12/2016.
  */
-
-package model;
-
 public class ToDoListItem {
 	//define vars
 	private int id;
@@ -60,6 +59,9 @@ public class ToDoListItem {
 	 * @param id the id to set
 	 */
 	public void setId(int id) {
+        if (id<0){
+            throw new IllegalArgumentException("id cant be negative");
+        }
 		this.id = id;
 	}
 
@@ -75,6 +77,9 @@ public class ToDoListItem {
       * @param title the title to set
       */
      public void setTitle(String title) {
+         if (title==null){
+             throw new NullPointerException("title can't be null");
+         }
          this.title = title;
      }
 
@@ -89,6 +94,9 @@ public class ToDoListItem {
 	 * @param status the status to set
 	 */
 	public void setStatus(String status) {
+        if (status==null){
+            throw new NullPointerException("status can't be null");
+        }
 		this.status = status;
 	}
 
@@ -104,6 +112,9 @@ public class ToDoListItem {
 	 * @param description the description to set
 	 */
 	public void setDescription(String description) {
+        if (description==null){
+            throw new NullPointerException("description can't be null");
+        }
 		this.description = description;
 	}
 

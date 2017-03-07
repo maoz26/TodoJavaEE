@@ -48,7 +48,7 @@
                      <td><input  type="text" placeholder="status" name="status"  title="Insert status"  /></td>
                  </tr>
             </table>
-            <input class="submit" type="submit"/>
+            <input class="submit" value="Submit" type="submit"/>
         </form>
     </div>
 </body>

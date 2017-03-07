@@ -21,6 +21,7 @@ import java.util.logging.Logger;
 @WebServlet("/ToDoListController/*")
 public class ToDoListController extends HttpServlet {
 
+	//vars
 	private static final long serialVersionUID = 1L;
 	public final static Logger logger = Logger.getLogger(ToDoListController.class.getName());
 	private HttpSession session ;
@@ -40,7 +41,7 @@ public class ToDoListController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//create new session if not exist 
 		this.session = request.getSession(true);
-		//user objet ref 
+		//user object ref
 		User currentUser = null;
 		//checking which url address the request was equipped with
 		StringBuffer sb = request.getRequestURL();
@@ -70,7 +71,7 @@ public class ToDoListController extends HttpServlet {
 		StringBuffer sb = request.getRequestURL();
 		String url = sb.toString();
 		try{
-			//login requset
+			//login request
 			if ((userAuthentication(request, response) == true) && (isLogin == false)){
 				isLogin = true;
 				logger.info("user has login");
@@ -100,7 +101,6 @@ public class ToDoListController extends HttpServlet {
 	 */
 	private void userActionPageSelector(HttpServletRequest request, HttpServletResponse response , String url ) throws ServletException, IOException {
 		logger.info("Get items is active");
-		//user object ref 
 		User currentUser = null;
 		try{
 			//get all items

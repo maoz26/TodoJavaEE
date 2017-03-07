@@ -1,62 +1,58 @@
-/**
- * ToDoList Data Access Object
- * Created by maoztamir on 31/12/2016.
- */
-
 package model;
 
 import java.util.Collection;
 
+/**
+ * ToDoList Data Access Object interface
+ * Created by maoztamir on 31/12/2016.
+ */
 public interface IToDoListDAO {
 
     /**
      * Add ToDoList item to the database
-     * @param Item
-     * @throws ToDoListsPlatformException
+     * @param Item add todo list item
+     * @throws ToDoListsPlatformException custom exception
      */
     public Boolean addToDoListItem(ToDoListItem Item) throws ToDoListsPlatformException;
 
     /**
-     * Delete ToDoList item from the database
-     * @return
-     * @throws ToDoListsPlatformException
+     * @param item Delete todo list item
+     * @throws ToDoListsPlatformException custom exception
      */
     public Boolean deleteToDoListItem(ToDoListItem item) throws ToDoListsPlatformException;
 
     /**
-     * Get ToDoList items collection
-     * @return
-     * @throws ToDoListsPlatformException
+     * @param userId Get todo List items collection
+     * @throws ToDoListsPlatformException custom exception
      */
     public Collection<ToDoListItem> getAllToDoListItem(int userId) throws ToDoListsPlatformException;
 
+
     /**
-     * Update ToDoList item to the database
+     * @param item
      * @return true if success or false if failed
-     * @throws ToDoListsPlatformException
+     * @throws ToDoListsPlatformException custom exception
      */
     public Boolean updateToDoListItem(ToDoListItem item) throws ToDoListsPlatformException;
 
     /**
-     * gets user object check if exist in DB
+     * @param user gets user object check if exist in DB
      * if not exist create new one
      * the pass will be encrypted in DB with md5 algorithm
-     * @param user
-     * @throws ToDoListsPlatformException
+     * @throws ToDoListsPlatformException custom exception
      */
     public void signUp(User user) throws  AuthenticationHandlerException;
 
     /**
-     * login to DB
-     * @param userId - contain user info
-     * @throws AuthenticationHandlerException
+     * @param userId -login to DB contain user info
+     * @throws AuthenticationHandlerException custom exception
      */
     public User login(int userId, String password) throws AuthenticationHandlerException;
 
     /**
      * get all user list from DB
      * @return user list
-     * @throws AuthenticationHandlerException
+     * @throws AuthenticationHandlerException custom exception
      */
     public Collection<User> getAllUsers() throws AuthenticationHandlerException;
 

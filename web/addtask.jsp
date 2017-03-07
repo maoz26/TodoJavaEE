@@ -28,7 +28,7 @@
                     <td><input  type="text" placeholder="description" name="description"  title="Insert Description"/></td>
                 </tr>
             </table>
-            <input class="submit" type="submit"/>
+            <input class="submit" value="Submit" type="submit"/>
         </form>
     </div>
 </body>

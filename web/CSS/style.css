@@ -4,7 +4,8 @@
 */
 body {
     padding-top: 90px;
-    background-image: url("../IMAGES/login.png");
+    /*background-image: url("../IMAGES/login.png");*/
+	background-color: slateblue !important;
     background-size: contain;   
 }
 

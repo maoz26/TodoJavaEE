@@ -1,9 +1,9 @@
-/**
- * Created by maoztamir on 06/01/2017.
- */
-
 package model;
 
+/**
+ * User Class
+ * Created by maoztamir on 06/01/2017.
+ */
 public class User {
     //define vars
     private int userId;
@@ -40,6 +40,9 @@ public class User {
      * @param id the id to set
      */
     public void setUserId(int id) {
+        if (id<0){
+            throw new IllegalArgumentException("id cant be negative");
+        }
         this.userId = id;
     }
 
@@ -54,6 +57,9 @@ public class User {
      * @param userName the userName to set
      */
     public void setUserName(String userName) {
+        if (userName==null){
+            throw new NullPointerException("userName can't be null");
+        }
         this.userName = userName;
     }
 
@@ -68,6 +74,9 @@ public class User {
      * @param userLastName the userLastName to set
      */
     public void setUserLastName(String userLastName) {
+        if (userLastName==null){
+            throw new NullPointerException("userLastName can't be null");
+        }
         this.userLastName = userLastName;
     }
 
@@ -82,6 +91,9 @@ public class User {
      * @param password the password to set
      */
     public void setPassword(String password) {
+        if (password==null){
+            throw new NullPointerException("password can't be null");
+        }
         this.password = password;
     }
 

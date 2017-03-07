@@ -34,7 +34,8 @@
                     <td><input  type="text" name="id"  title="Inset Id" /></td>
                 </tr>
             </table>
-            <input class="submit" type="submit"/>
+            <br>
+            <input class="submit" value="Submit" type="submit"/>
         </form>
     </div>
 </body>

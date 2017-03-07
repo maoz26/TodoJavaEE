@@ -1,7 +1,3 @@
-/**
- * Created by maoztamir on 31/12/2016.
- */
-
 package model;
 
 import com.sun.istack.internal.logging.Logger;
@@ -13,9 +9,13 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
+/**
+ * Todo list Dao Object
+ * Created by maoztamir on 31/12/2016.
+ */
 public class HibernateToDoListDAO implements IToDoListDAO {
     //logger instance
-    static Logger logger = Logger.getLogger(HibernateToDoListDAO.class);
+    private static Logger logger = Logger.getLogger(HibernateToDoListDAO.class);
     //Session instance
     private Session session;
     //Singleton instance static var
@@ -95,16 +95,16 @@ public class HibernateToDoListDAO implements IToDoListDAO {
      */
     @Override
     public Collection<ToDoListItem> getAllToDoListItem(int userId) throws ToDoListsPlatformException {
-        ArrayList<ToDoListItem> arrayList = new ArrayList<ToDoListItem>();
+        ArrayList<ToDoListItem> arrayList = new ArrayList<>();
         try{
             logger.info("Get items");
             this.session = SessionFactoryAccess.getInstance().getSessionFactory().openSession();
-            List<ToDoListItem> itemLiset = session.createQuery("FROM ToDoListItem WHERE userId="+userId).list();
-            Iterator i = itemLiset.iterator();
+            List<ToDoListItem> itemList = session.createQuery("FROM ToDoListItem WHERE userId="+userId).list();
+            Iterator i = itemList.iterator();
             while(i.hasNext())
             {
                 ToDoListItem item = (ToDoListItem) i.next();
-                logger.info(itemLiset.toString()+"\n");
+                logger.info(itemList.toString()+"\n");
                 arrayList.add(item);
             }
         }catch (HibernateException e){
@@ -147,11 +147,10 @@ public class HibernateToDoListDAO implements IToDoListDAO {
     }
 
     /**
-     * gets user object verify if exist in DB
-     * if not exist create new one
+     * @param user gets user object verify if exist in DB
+     *  if not exist create new one
      * the pass will be encrypted in DB with md5 algorithm
-     * @param user
-     * @throws ToDoListsPlatformException
+     * @throws ToDoListsPlatformException display custom exception
      */
     public void signUp(User user) throws  AuthenticationHandlerException{
         logger.info("Sign up request");
@@ -164,7 +163,7 @@ public class HibernateToDoListDAO implements IToDoListDAO {
                 this.session.beginTransaction();
                 this.session.save(user);
                 this.session.getTransaction().commit();
-                System.out.println("user successfuly sign up");
+                System.out.println("user successfully sign up");
             }catch(HibernateException e){
                 //roll back in case of problem
                 if (this.session.getTransaction() != null) {
@@ -185,10 +184,9 @@ public class HibernateToDoListDAO implements IToDoListDAO {
     }
 
     /**
-     * this method check if user exist in DB
-     * @param userId
-     * @return - user from DB
-     * @throws AuthenticationHandlerException
+     * @param userId this method check if user exist in DB
+     * @return - user from DB display custom exception
+     * @throws AuthenticationHandlerException custom exception
      */
     @Nullable
     private User checkIfUserExist(int userId) throws AuthenticationHandlerException{
@@ -224,7 +222,6 @@ public class HibernateToDoListDAO implements IToDoListDAO {
         password = (AuthenticationHandlerUtilitiesScala.passEncryption(password));
         //check if user exist , if yes returns user instance
         if ((authenticateUser = checkIfUserExist(userId)) != null){
-            ///***** need to implement some logic here ******
             logger.info(authenticateUser.getUserName());
             if(authenticateUser.getPassword().equals(password)){
                 logger.info("user exist in DB");
@@ -246,7 +243,6 @@ public class HibernateToDoListDAO implements IToDoListDAO {
      * @return user list
      * @throws AuthenticationHandlerException
      */
-
     @Override
     public Collection<User> getAllUsers() throws AuthenticationHandlerException {
         ArrayList<User> arrayList = new ArrayList<User>();
@@ -260,7 +256,7 @@ public class HibernateToDoListDAO implements IToDoListDAO {
                 arrayList.add(user);
             }
         }catch (HibernateException e){
-            throw new AuthenticationHandlerException("Problem get all items", e);
+            throw new AuthenticationHandlerException("Problem to get all the items", e);
         }finally {
             try {
                 this.session.close();

@@ -41,13 +41,7 @@ public class SigninController extends HttpServlet {
 		this.session = request.getSession(true);
 		//checking which url address the request was equipped with
 		StringBuffer sb = request.getRequestURL();
-//		String url = sb.toString();
-//		if (url.endsWith("signin")){
-//		dispatcher = getServletContext().getRequestDispatcher("/signin.jsp");
-//
-//		}else {
-			dispatcher = getServletContext().getRequestDispatcher("/login.jsp");
-//		}
+		dispatcher = getServletContext().getRequestDispatcher("/login.jsp");
 		dispatcher.forward(request, response);
 	}
 
@@ -55,8 +49,10 @@ public class SigninController extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		signUpNewUser(request,response); // get signin request and handler with siginin 
-		directToLogInPage(request, response); // after finish signin go to login page
+		// signUp function
+		signUpNewUser(request,response);
+		// redirect to login page
+		directToLogInPage(request, response);
 	}
 	
 	/**

@@ -1,5 +1,9 @@
 package model;
 
+/**
+ * main class for tests
+ * Created by maoztamir on 31/12/2016.
+ */
 public class ToDoListMain {
 
 	public static void main(String[] args) {

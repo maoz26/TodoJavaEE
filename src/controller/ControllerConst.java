@@ -17,5 +17,4 @@ public final class ControllerConst {
 	static final String ADMIN = "Admin";
 	static final String USERS_LIST = "userlist";
 	static final int ADMIN_ID = 0;
-
 }

@@ -34,6 +34,7 @@
           <element id="file-copy" path="$USER_HOME$/Desktop/jars_this_code_sample_uses/mysql-connector-java-5.1.13-bin.jar" />
           <element id="file-copy" path="$USER_HOME$/Desktop/jars_this_code_sample_uses/hibernate3.jar" />
           <element id="file-copy" path="$USER_HOME$/Desktop/jars_this_code_sample_uses/hibernate-jpa-2.0-api-1.0.0.Final.jar" />
+          <element id="file-copy" path="$USER_HOME$/Desktop/jasper/jasper-6.0.29.0.jar" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="Todo/web/Web" />
