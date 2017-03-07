@@ -1,0 +1,9 @@
+Bonuses included:
+0.5 pt - for developing a new JSP tag (with body and/or with attribute\s) by developing a new class (e.g. developing a new JSP tag for presenting a specific todo item).
+0.5 pt - for using the Scala programming language (one class at the minimum)
+0.5 pt - for developing a web interface that allows the web application administrator to monitor the sessions (creation/destruction) as well as the sessions’ attributes (adding/removing/replacing). 
+0.5 pt - for implementing logging messages using Log4J and MongoDB. 
+0.5 pt - for presenting a welcome message that includes the user name on the login page. the implementation of this feature should be using a cookie. https://youtu.be/iaBiwVOkK8w 
+2 pt - for developing a nice user interface using the bootstrap library (www.getbootstrap.com). In order to get this bonus you should use bootstrap in all pages.
+1 pt - for creating a website using Git Pages that explains to the user how to use your ToDo web application (available just for those who develop a final project with a nice user interface using bootstrap). The explanation should include images (screenshots). 
+0.5 pt - for developing a filter that adds to the bottom of the screen the measured time that took to generate the response (for each and every web page).
